@@ -1,0 +1,1 @@
+Esse projeto é um modelo de site tipo portfólio.

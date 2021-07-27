@@ -1,0 +1,488 @@
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgba(251, 245, 239, 1);
+}
+
+li {
+  list-style: none;
+}
+
+h1, h2, h3, h4, a, label, button {
+  font-family: 'Lora', serif;
+  font-weight: bold;
+}
+
+.title {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 1.25rem;
+}
+
+a {
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.menu li a::after {
+  content: '';
+  display: block;
+  width: 0;
+  transition: width 1s;
+}
+
+.menu li a.active::after, .menu li a:hover::after {
+  width: 100%;
+  height: 3px;
+  background: rgba(10, 29, 55, 1);
+}
+
+p {
+  font-family: 'Lato', sans-serif;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+ul.menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  box-shadow: 0px 3px 5px 0px rgba(10, 29, 55, .25);
+}
+
+li + li {
+  margin-left: 1.25rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+}
+
+.about {
+  padding: 1.25rem;
+  background-color: rgba(255, 216, 204, 1);
+  overflow-x: hidden;
+  height: 100vh;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+
+.profile-img {
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  margin: 0 auto;
+  border-radius: 100%;
+  margin-bottom: 2.5rem;
+  border: 3px solid rgba(10, 29, 55, 1);
+}
+
+.profile-img img {
+  width: 100%;
+  height: auto;
+  margin-top: 50%;
+  margin-left: 50%;
+  transform: translate3d(-50%, -50%, 0);
+}
+
+.container-about h2 {
+  font-style: italic;
+  text-align: center;
+}
+
+.container-about h2, .container-about p {
+  margin-bottom: 1.25rem;
+}
+
+a.resume {
+  display: block;
+  max-width: 140px;
+  margin: 0 auto 1.5rem auto;
+  padding: .5rem;
+  text-align: center;
+  border: 3px solid rgba(10, 29, 55, 1);
+  background: rgba(251, 245, 239, 1);
+  box-shadow: 0 3px 5px 0px rgba(10, 29, 55, .25);
+  transition: .3s;
+}
+
+a.resume:hover {
+  border-color: rgba(251, 245, 239, 1);
+  box-shadow: 0px 0px 0px 0px;
+}
+
+.social {
+  display: flex;
+  justify-content: center;
+}
+
+.social a + a {
+  margin-left: 0.5rem;
+}
+
+.social a {
+  width: 3rem;
+  height: 3rem;
+  background-color: rgba(251, 245, 239, 1);
+  border: 3px solid rgba(10, 29, 55, 1);
+  border-radius: 100%;
+  box-shadow: 0 3px 5px 0 rgba(10, 29, 55, .25);
+  transition: .3s;
+}
+
+.social a:hover {
+  border-color: rgba(251, 245, 239, 1);
+  box-shadow: 0px 0px 0px 0px;
+}
+
+.social a i {
+  font-size: 1.5rem;
+  position: relative;
+  margin-top: 50%;
+  margin-left: 50%;
+  transform: translate3d(-50%,-50%,0);
+}
+
+.gallery {
+  margin: 1.25rem;
+  margin-bottom: 6rem;
+}
+
+.menu-gallery {
+  display: flex;
+  justify-content: center;
+  padding: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.menu-gallery li a {
+  opacity: .4;
+  transition: opacity 1s;
+}
+
+.menu-gallery li a::after {
+  content: '';
+  width: 0;
+  transition: width 1s;
+}
+
+.menu-gallery li.active a, .menu-gallery li:hover a {
+  opacity: 1;
+}
+
+.menu-gallery li.active a::after, .menu-gallery li:hover a::after {
+  content: '';
+  display: block;
+  height: 3px;
+  width: 100%;
+  background: rgba(10, 29, 55, 1);
+}
+
+.grid-gallery {
+  line-height: 0;
+  column-count: 3;
+  column-gap: 1.25rem;
+}
+
+.grid-gallery img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.grid-gallery img:hover {
+  animation: bordar .5s forwards;
+  border-style: solid;
+  border-color: rgba(10, 29, 55, 1);
+  cursor: pointer;
+}
+
+@keyframes bordar {
+  0% {
+    border-width: 0px 0px 0px 0px;
+    box-shadow: 0px 0px 5px 0px rgba(10, 29, 55, .25);
+  }
+  25% {
+    border-width: 5px 0px 0px 0px;
+  }
+  50% {
+    border-width: 5px 5px 0px 0px;
+  }
+  75% {
+    border-width: 5px 5px 5px 0px;
+  }
+  100% {
+    border-width: 5px 5px 5px 5px;
+    box-shadow: 0px 5px 5px 0px rgba(10, 29, 55, .25);
+  }
+}
+
+@keyframes show {
+  from {
+    opacity: 0;
+    transform: scale3d(0,1,0);
+  }
+  to {
+    opacity: 1;
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+.contact {
+  margin: 0 1.25rem 3rem 1.25rem;
+  box-shadow: 0px 3px 5px 3px rgba(10, 29, 55, .25);
+  padding: 1.25rem 2.5rem;
+}
+
+.contact-card {
+  display: flex;
+}
+
+.contact-info {
+  flex: 1;
+  max-width: 300px;
+  text-align: center;
+}
+
+.contact-info .profile-img {
+  margin: 0 auto 2.5rem auto;
+}
+
+.contact form {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  margin-left: 1.25rem;
+}
+
+.contact form label {
+   font-size: 1.5rem;
+   margin-bottom: 0;
+}
+
+.contact input, .contact select, .contact textarea {
+  margin-bottom: 1rem;
+  padding: 1rem .5rem;
+  background: none;
+  border: 0;
+  border-bottom: 3px solid rgba(10, 29, 55, 1);
+  cursor: pointer;
+  font-family: 'Lato', sans-serif;
+  font-size: 1rem;
+}
+
+.contact select {
+  appearance: none;
+}
+
+.contact select::-ms-expand {
+  display: none;
+}
+
+.contact input:focus, .contact select:focus, .contact textarea:focus {
+  outline: none;
+}
+
+.contact textarea {
+  resize: none;
+  min-height: 240px;
+  margin-bottom: 2.5rem;
+}
+
+.contact button {
+  width: 100px;
+  padding: .5rem;
+  font-size: 1.25rem;
+  background: rgba(255, 216, 204, 1);
+  border: 3px solid rgba(10, 29, 55, 1);
+  box-shadow: 0 3px 5px 0 rgba(10, 29, 55, .25);
+  align-self: flex-end;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.contact button:hover {
+  border-color: rgba(255, 216, 204, 1);
+  box-shadow: 0px 0px 0px 0px;
+}
+
+.modal-box {
+  display: block;
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  background: rgba(0, 0, 0, .6);
+  z-index: 200;
+}
+
+.modal-content {
+  display: block;
+  position: relative;
+  height: 100%;
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.modal-content img {
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  top: 15%;
+  width: 900px;
+  height: 70%;
+  background-color: rgba(251, 245, 239, 1);
+}
+
+.modal-btn {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  top: 50%;
+  width: 100%;
+}
+
+.arrow {
+  content: '';
+  padding: 6px;
+  border-top: 6px solid white;
+  border-left: 6px solid white;
+}
+
+.left {
+  transform: rotate(-45deg);
+}
+
+.right {
+  transform: rotate(135deg);
+}
+
+@media only screen and (min-width: 1100px) and (max-width: 1350px) {
+  .grid {
+    grid-template-columns: 1fr 3fr;
+  }
+
+  .contact-card {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact form {
+    width: 100%;
+    margin-top: 2.5rem;
+    margin-left: 0;
+  }
+}
+
+@media only screen and (min-width: 740px) and (max-width: 1100px) {
+  .grid {
+    grid-template-columns: 1fr 2fr;
+  }
+
+  .grid-gallery {
+    column-count: 2;
+    column-gap: 1rem;
+  }
+
+  .contact-card {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact form {
+    width: 100%;
+    margin-top: 2.5rem;
+    margin-left: 0;
+  }
+}
+
+@media only screen and (min-width: 500px) and (max-width: 740px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .grid-gallery {
+    column-count: 2;
+    column-gap: .5rem;
+  }
+
+  .about {
+    padding: 1.25rem 1.25rem 2rem 1.25rem;
+    background-color: rgba(255, 216, 204, 1);
+    overflow-x: hidden;
+    height: auto;
+    position: static;
+  }
+
+  .contact-card {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact form {
+    width: 100%;
+    margin-top: 2.5rem;
+    margin-left: 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.25rem;
+  }
+
+  a {
+    font-size: 1.25rem;
+  }
+
+  li + li {
+    margin-left: .8rem;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .grid-gallery {
+    column-count: 1;
+    column-gap: .5rem;
+  }
+
+  .about {
+    padding: 1.25rem 1.25rem 2rem 1.25rem;
+    background-color: rgba(255, 216, 204, 1);
+    overflow-x: hidden;
+    height: auto;
+    position: static;
+  }
+
+  .contact-card {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact form {
+    width: 100%;
+    margin-top: 2.5rem;
+    margin-left: 0;
+  }
+
+  .contact form label {
+    font-size: 1.25rem;
+    margin-bottom: 0;
+ }
+}
+

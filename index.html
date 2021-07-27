@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Portfólio - One page</title>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!--Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&family=Lora:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    <!--FONT AWESOME-->
+    <link href="./css/all.min.css" rel="stylesheet">
+    <!--CSS-->
+    <link rel="stylesheet" href="./css/style.css">
+  </head>
+  <body>
+    <section class="grid">
+      <!--Sobre-->
+      <nav class="about">
+        <div class="container-about">
+          <div class="profile-img"><img src="./img/fotografa-perfilV2.jpg"></div>
+          <h2>Olá, meu nome é Lora e sou fotográfa.</h2>
+          <p>Lorem ipsum luctus habitant ultricies hendrerit tristique pretium rutrum aenean massa eget, ultrices amet taciti eros platea erat vitae feugiat litora. inceptos fames at phasellus aliquam malesuada semper cras pretium rutrum, curae taciti sollicitudin phasellus auctor sem cursus in, hendrerit</p>
+          <a class="resume">Currículo</a>
+          <nav class="social">
+            <a><i class="fab fa-instagram"></i></a>
+            <a><i class="fab fa-facebook-f"></i></a>
+            <a><i class="fab fa-twitter"></i></a>
+            <a><i class="fab fa-linkedin-in"></i></a>
+          </nav>
+        </div>
+      </nav>
+
+      <!--Conteúdo-->
+      <div class="content">
+        <!--Menu-->
+        <nav>
+          <ul class="menu">
+            <li><a class="active">Portfólio</a></li>
+            <li><a>Contato</a></li>
+          </ul>
+        </nav>
+
+        <!--Galeria-->
+        <section id="gallery" class="gallery">
+          <h1 class="title">Portfólio</h1>
+          <ul class="menu-gallery" data-tab="buttons">
+            <li><a>Todos</a></li>
+            <li><a>Pet</a></li>
+            <li><a>Paisagem</a></li>
+            <li><a>Casamento</a></li>
+          </ul>
+          <div class="grid-gallery" data-tab="todos">
+            <img src="./img/pets/pug.jpg" alt="Cachorro Pug" data-tab="pet">
+            <img src="./img/paisagens/fonte.jpg" alt="Paisagem Fonte com pedras" data-tab="paisagem">
+            <img src="./img/pets/chiba.jpg" alt="Cachorro Chiba Inu" data-tab="pet">
+            <img src="./img/casamentos/cerimonia-casamento.jpg" alt="Cerimônia de casamento" data-tab="casamento">
+            <img src="./img/paisagens/cactus-noite.jpg" alt="Deserto à noite" data-tab="paisagem">
+            <img src="./img/pets/dois-dachshund.jpg" alt="Dois cachorros Dachshund" data-tab="pet">
+            <img src="./img/casamentos/mulher-vestido-casamento.jpg" data-tab="casamento">
+            <img src="./img/paisagens/entardecer.jpg" alt="Montanhas no entardecer" data-tab="paisagem">
+            <img src="./img/pets/filhote.jpg" alt="filhote de cachorro" data-tab="pet">
+            <img src="./img/casamentos/casamento.jpg" alt="Casal feliz no casamento" data-tab="casamento">
+            <img src="./img/pets/dogs.jpg" data-tab="pet">
+            <img src="./img/pets/filhote-no-quintal.jpg" data-tab="pet">
+            <img src="./img/paisagens/lago.jpg" data-tab="paisagem">
+            <img src="./img/pets/dois-terriers.jpg" data-tab="pet">
+            <img src="./img/casamentos/homens-casamento.jpg" data-tab="casamento">
+            <img src="./img/paisagens/cachoeira.jpg" data-tab="paisagem">
+            <img src="./img/casamentos/casamento-lago.jpg" data-tab="casamento">
+            <img src="./img/paisagens/montanhas-noite.jpg" data-tab="paisagem">
+            <img src="./img/pets/dog-no-quintal.jpg" data-tab="pet">
+            <img src="./img/casamentos/duas-mulheres-casamento.jpg" data-tab="casamento">
+            <img src="./img/pets/corgi.jpg" data-tab="pet">
+            <img src="./img/casamentos/vestido-casamento.jpg" data-tab="casamento">
+          </div>
+        </section>
+
+        <section id="contact" class="contact">
+          <h1 class="title">Contato</h1>
+          <div class="contact-card">
+            <div class="contact-info">
+              <div class="profile-img"><img src="./img/fotografa-contato.jpg"></div>
+              <h2>Sinta-se a vontade para entrar em contato!</h2>
+            </div>
+            <form>
+              <label>Nome completo:</label>
+              <input>
+              <label>E-mail:</label>
+              <input>
+              <label>Assunto:</label>
+              <select>
+                <option>Orçamento</option>
+                <option>Dúvidas</option>
+              </select>
+              <label>Mensagem:</label>
+              <textarea></textarea>
+              <button>Enviar</button>
+            </form>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <div class="modal-box" data-modal="box">
+      <div class="modal-content" data-modal="content">
+        <img class="modal-img ">
+        <div class="modal-btn">
+          <span class="arrow left" data-modal="btn-left"></span>
+          <span class="arrow right" data-modal="btn-right"></span>
+        </div>
+      </div>
+    </div>
+    <!--SCRIPT-->
+    <script src="./js/script.js"></script>
+  </body>
+</html>
